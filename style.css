@@ -1,0 +1,307 @@
+*{
+  margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:root{
+  
+  --font-family: 'Roboto', sans-serif;
+  
+  --hue: 240;
+  --bg-button-one: hsl(var(--hue), 39%, 39%);
+  --bg-button-hover: hsl(var(--hue),97%, 31%);
+  --font-color: hsl(var(--hue), 36%, 21%);
+  --buttons-controls:hsl(var(--hue),36%, 35%);
+  --primary-color: hsl(var(--hue), 0%, 95%);
+  --icon-color: hls(var(--hue),16%, 17%);
+ 
+
+    font-size: 62.5%;
+  }
+
+  .dark-mode:root{
+   
+  --bg-button-one: hsl(var(--hue), 6%, 17%);
+  --bg-button-hover: hsl(var(--hue), 74%, 25%, 1);
+  --font-color: hsl(var(--hue), 0%, 0%, 100%);
+  --buttons-controls:hsl(var(--hue), 7%, 8%, 1);
+  --primary-color: hsl(var(--hue), 6%, 21%, 1);
+  --icon-color: hls(var(--hue),70%, 15%);
+    }
+
+
+body{
+  min-height: 100vw; 
+  min-width: 100vh;
+  background-color: var(--primary-color); 
+ 
+ 
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  
+}
+
+ nav label svg path{
+  opacity: -1;
+ 
+}
+
+nav label:hover svg path{
+  color: var(--primary-color);
+  opacity: 1;
+  filter: brightness(3);
+  
+}
+
+
+
+
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: clamp(5rem, 10rem + 5vw, 20rem);
+  flex-wrap: wrap;
+  padding-top: 15rem;
+  align-items: baseline;
+}
+ section #timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+}
+
+
+
+
+
+
+nav {
+  position: fixed;
+  top: 3rem;
+  right: .5rem;
+}
+
+span{
+  font-family: var(--font-family); 
+  font-size: clamp(10rem, 10rem + 10vw, 12rem);
+  color: var(--font-color);
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+   
+}
+ 
+  
+.cards
+{
+display: grid;
+gap: 3.2rem;
+grid-template-areas:
+    'A B'
+    'C D';
+    
+ position: relative;
+ border-radius: 2.4rem;
+ 
+ transition: all 100ms;
+}
+
+ section .cards  svg{
+   width: 16.2rem;
+   height: 23.20rem;
+   padding: 10px;
+   justify-content: space-around;
+   align-items: flex-end;
+   
+  }
+
+  .cards svg path:nth-child(1) {
+    fill: var(--bg-button-one);
+  }
+
+  .cards svg:hover path:nth-child(1) {
+    fill: var(--bg-button-hover);
+  }
+
+  section .cards svg  circle{
+    fill: none;
+  }
+
+  section .cards svg  rect{
+    fill: none;
+  }
+
+ 
+
+  input {
+    position: absolute;
+    display: flex;
+    margin-top: -4rem;
+    width: 10rem;
+    align-items: center;
+    z-index: 2;
+    margin-left: 2rem;
+    
+  }
+
+
+#timer{
+   width:32.10rem;
+   height: 20.6rem;
+   
+  
+}
+p{
+  font-size: 1.8rem;
+  font-family: var(--font-family);
+  font-weight: bold;
+  color: var(--buttons-controls);
+  transition: all 300ms;
+  display: flex;
+  margin-right: -9%;
+  
+ 
+ }
+
+p:hover{
+  font-size:1.5rem;
+  color: var(--font-family)
+
+}
+
+#controls{
+ 
+  border-radius: 1rem;
+  border: none;
+  width: 5.8rem;
+  height: 4.8rem;
+  margin-top: 4.1rem;
+   align-items: center;
+ 
+ display: flex;
+ justify-content: space-between;
+   
+}
+
+#controls button{
+  border: none;
+  display: flex;
+  gap: 4rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  }
+
+  #controls svg path{
+    fill:var(--buttons-controls);
+  }
+  
+
+
+button:hover{
+  transition:all 100ms;
+  transform: scale(1.02);
+
+}
+
+
+
+#controls button:hover svg path{
+ 
+    fill:var(--bg-button-hover);
+     transition-delay: 100ms;
+     filter: brightness(0.5);
+   
+}
+
+
+#controls .hide{
+ display: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+footer a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1rem;
+
+}
+
+footer a:hover{
+  color: var(--bg-button-hover);
+  transform: all 500ms;
+  font-size:large;
+  font-weight: bold;
+  
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12rem;
+  
+}
+
+footer a  {
+  
+  font-family: var(--font-family);
+  font-size: 2rem;
+  color: var(--buttons-controls);
+  margin-left: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  
+  
+}
+
+
+@media
+(max-width:600px)
+{
+main{ 
+  padding: 10rem;
+ display: flex;
+ flex-direction: column;
+  
+  
+}
+
+footer{
+  display: none;
+  
+}
+
+
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+}
+ 
