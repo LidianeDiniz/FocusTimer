@@ -287,9 +287,12 @@ main{
   padding: 10rem;
  display: flex;
  flex-direction: column;
-  
+   border-top: 10rem;
+  align-content: center;
   
 }
+  
+  
 
 footer{
   display: none;
